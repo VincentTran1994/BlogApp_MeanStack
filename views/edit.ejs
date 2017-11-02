@@ -1,0 +1,26 @@
+<% include ./partial/header%>
+
+
+<form class="ui form segment container text" action="/blogs/<%= blog._id%>" method="POST">
+    <h2 class="ui header">Editting the <%= blog.title%></h2>
+    
+    <div class="field">
+        <label>Title</label>
+        <input type="text" name=blog[title] placeholder="Title" value="<%= blog.title%>"></input>
+    </div>
+    
+    <div class="field">
+        <label>Image</label>
+        <input type="text" name=blog[image] placeholder="Title" value="<%= blog.image%>"></input>
+    </div>
+    
+    <div class="field">
+        <label>Content</label>
+        <textarea type="text" name=blog[body]><%= blog.body%></textarea>
+    </div>
+    
+    <button class="ui purple secondary button" >Update</button>
+    <button class="ui purple secondary button" >Delete</button>
+</div>
+    
+    
